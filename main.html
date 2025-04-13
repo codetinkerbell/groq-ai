@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat with Groq</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.379/pdf.min.js"></script>
+
+</head>
+<body>
+
+  <!-- Toggle Button -->
+  <button id="toggle-history" class="toggle-btn">☰</button>
+
+  <!-- Sidebar -->
+  <div id="chat-history" class="chat-history">
+    <h2>History</h2>
+    <ul id="history-list"></ul>
+    <button id="new-chat-button">New Chat</button>
+  </div>
+
+  <!-- Chat Container -->
+  <div class="chat-container">
+    <div class="header">
+      <h1>Chat with Groq</h1>
+    </div>
+    <div id="chat-box" class="chat-box"></div>
+    <div class="input-container">
+      <textarea id="user-input" placeholder="Type your message..."></textarea>
+      <button id="send-button">Send</button>
+      <button onclick="saveCurrentChat()">💾</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

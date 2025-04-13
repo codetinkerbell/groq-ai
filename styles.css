@@ -1,0 +1,194 @@
+/* General body styling */
+body {
+  font-family: 'Press Start 2P', cursive; /* Retro pixel-style font */
+  background: linear-gradient(135deg, #fbb6ff, #fbb6ff); /* Neon-themed gradient */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #ffffff; /* White text color for contrast */
+}
+
+/* Chat container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 0, 221, 0.8); /* Dark translucent background for depth */
+  border: 4px solid #ffb7de; /* Neon aqua border */
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 119, 235, 0.8); /* Glowing effect */
+  width: 500px;
+  height: 600px;
+  overflow: hidden;
+}
+
+/* Header styling */
+.header {
+  background: #ff04a3; /* Aqua neon header */
+  color: #48fd8d; /* Black text for contrast */
+  padding: 15px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Chatbox */
+.chat-box {
+  flex-grow: 1;
+  padding: 15px;
+  background: #121212; /* Solid black for message visibility */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-box div {
+  max-width: 80%;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 12px;
+  word-wrap: break-word;
+}
+
+/* User messages */
+.chat-box div.user {
+  background: linear-gradient(135deg, #ff00b7, #fdbbff); /* Vibrant green neon */
+  color: #121212; /* Black text for legibility */
+  align-self: flex-end;
+  text-align: left;
+  border: 2px solid #ff00e1;
+  box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.6); /* Glowing green effect */
+}
+
+/* Bot messages */
+.chat-box div.groq {
+  background: linear-gradient(135deg, #e7aee4, #ff0191); /* Vibrant blue neon */
+  color: #000000; /* White text for legibility */
+  align-self: flex-start;
+  text-align: left;
+  border: 2px solid #ffffff00;
+  box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.6); /* Glowing blue effect */
+}
+
+/* Input container */
+.input-container {
+  display: flex;
+  border-top: 2px solid #e956da; /* Divider with neon color */
+  background: rgba(12, 12, 40, 0.9);
+}
+
+textarea {
+  flex-grow: 1;
+  border: none;
+  padding: 10px;
+  font-size: 12px;
+  resize: none;
+  background: #121212; /* Solid black */
+  color: #ffffff; /* Aqua text color */
+  outline: none;
+  border-radius: 0;
+}
+
+textarea::placeholder {
+  color: #ffffff; /* Neon placeholder */
+}
+
+/* Button styling */
+button {
+  background: linear-gradient(135deg, #ffffff, #ff0062); /* Neon gradient button */
+  color: #121212;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.6); /* Glowing effect */
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ffffff, #fe029d); /* Reverse gradient */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+button:active {
+  transform: scale(0.95); /* Pressed button effect */
+}
+/* Toggle Button */
+.toggle-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  background: #ff0090;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ffffff;
+  cursor: pointer;
+}
+
+/* Sidebar Styles */
+.chat-history {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #121212;
+  border-right: 3px solid #000000;
+  padding: 20px;
+  box-shadow: 4px 0 15px rgba(254, 254, 254, 0.2);
+  color: #ffffff;
+  transition: left 0.3s ease;
+  z-index: 9;
+}
+
+.chat-history.active {
+  left: 0;
+}
+
+.chat-history h2 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#history-list li {
+  padding: 8px;
+  margin-bottom: 8px;
+  background: #000000;
+  border: 1px solid #ff02c0;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.2s;
+}
+
+#history-list li:hover {
+  background: #ff005d;
+  color: #ffffff;
+}
+@media (max-width: 600px) {
+  .chat-container {
+    width: 100%;
+    height: auto;
+  }
+  .chat-box {
+    padding: 10px;
+  }
+  button {
+    padding: 10px;
+  }
+}
